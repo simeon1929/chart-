@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.graphCustom .nav {
+  margin-bottom: 15px;
+}
+
+.graphCustom .graphtitle {
+  font-size: 19px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.graphCustom .graphdetails {
+  margin-bottom: 15px;
+}
+
+.graphCustom .graphdetails .valueNumber {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.graphCustom .graphdetails .valueNames {
+  font-size: 16px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */
