@@ -5,77 +5,545 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chart</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="padding-top:50px;">
     <div class="container">
-        <div class="row">
 
-            <div class="col-md-4 graphCustom">
-                <div class="graphtitle">Sales statistics</div>
-                
+        <!-- dashbard top and tab -->
+
+        <div class="row rowPadding">
+            <div class="col-md-9 ">
+                <div class="boxshadow box topdashBardDetails mainTab">
+                    <!-- tab details -->
+                    <ul class="nav nav-tabs" id="graphDetailsTop" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="SALESTAB" data-bs-toggle="tab" data-bs-target="#salestop" type="button" role="tab" aria-controls="salestop" aria-selected="true">Sales</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="PURCHASETAB" data-bs-toggle="tab" data-bs-target="#purchaseTop" type="button" role="tab" aria-controls="purchaseTop" aria-selected="false">Purchase</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="INCOME" data-bs-toggle="tab" data-bs-target="#incomeTop" type="button" role="tab" aria-controls="incomeTop" aria-selected="false">Income</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="EXPENSE" data-bs-toggle="tab" data-bs-target="#expenseTop" type="button" role="tab" aria-controls="expenseTop" aria-selected="false">Expense</button>
+                        </li>
+                    </ul>
+                        <!-- tab content details -->
+                    <div class="tab-content tabdetails" id="myTabContent">
+                        <!-- tab started -->
+                        <div class="tab-pane fade show active" id="salestop" role="tabpanel" aria-labelledby="SALESTAB">
+                            <div class="row borderRow">
+                                <div class="col-md-3 borderRight">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="smallmap">
+                                                <img src="img/gprah.png" alt="">
+                                            </div>
+                                            <div class="mapDetails">
+                                                <i class="fas fa-caret-down"></i>2.56%
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="amount">
+                                                1.450.665
+                                            </div>
+                                            <div class="details__amount">
+                                                SALES
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 borderRight">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="smallmap">
+                                                <img src="img/gprahTwo.png" alt="">
+                                            </div>
+                                            <div class="mapDetails">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="amount">
+                                                1.450.665
+                                            </div>
+                                            <div class="details__amount">
+                                                EXPENSE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 borderRight">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="smallmap">
+                                                <img src="img/gprah.png" alt="">
+                                            </div>
+                                            <div class="mapDetails">
+                                                <i class="fas fa-caret-down"></i>2.56%
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="amount">
+                                                1.450.665
+                                            </div>
+                                            <div class="details__amount">
+                                                INCOME
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 borderRight">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="smallmap">
+                                                <img src="img/gprahTwo.png" alt="">
+                                            </div>
+                                            <div class="mapDetails">
+                                                <i class="fas fa-caret-down"></i>2.56%
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="amount">
+                                                1.450.665k
+                                            </div>
+                                            <div class="details__amount">
+                                                EXPENSE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab end -->
+
+                        <!-- tab started -->
+                        <div class="tab-pane fade" id="purchaseTop" role="tabpanel" aria-labelledby="PURCHASETAB">
+                            PURCHASE
+                        </div>
+                        <!-- tab end -->
+                        <!-- tab started -->
+                        <div class="tab-pane fade" id="incomeTop" role="tabpanel" aria-labelledby="INCOME">
+                            INCOME
+                        </div>
+                        <!-- tab end -->
+                        <!-- tab started -->
+                        <div class="tab-pane fade" id="expenseTop" role="tabpanel" aria-labelledby="EXPENSE">
+                            EXPENSE
+                        </div>
+                        <!-- tab end -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="boxshadow">
+                    <div class="themeSelect">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="priceSelect">
+                        <span>&dollar;</span> 40,000,500 .00
+                    </div>
+                    <div class="accountDetails">
+                        Savings A/C ***********1286
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row rowPadding">
+            <!-- dashboard -->
+            <div class="col-md-12 graphCustom mainTab">
+                <!-- tabs list started -->
                 <ul class="nav nav-tabs" id="sideView" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="GRAPHone" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Graph One</button>
+                      <button class="nav-link active" id="GRAPHone" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Payable</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="GRAPHTWO" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Graph Two</button>
+                      <button class="nav-link" id="GRAPHTWO" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Reciveable</button>
                     </li>
                 </ul>
+                 <!-- tabs list end -->
             
-                  <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="GRAPHone">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="GRAPHone">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="boxshadow">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="graphtitle">Payable</div>
+                                            <canvas id="SALES" width="100" height="42"></canvas>
+                                        </div>
+                                        <!-- <div class="col-md-3">
+                                            <div class="themeSelect">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Weekly</option>
+                                                    <option value="1">Mothly</option>
+                                                    <option value="2">Yearly</option>
+                                                    <option value="3">Date</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="boxStylebg boderRadious">
+                                                <canvas id="roundChart"></canvas>
+                                            </div>
+                                            
+                                        </div> -->
+                                    </div>
+                                    
+
+                                </div>
+                                
+                            </div>
+
+                            <!-- col started -->
+                            <div class="col-md-3">
+
+                                <div class="boxshadow spaceRow actiiveSmallGrapg">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">Vendor</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="GRAPHVendor" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-down"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle"> Due Vendor</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="DueVendor" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- col end -->
+
+                            <!-- col started -->
+                            <div class="col-md-3">
+
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">purchse</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="VENDORPURCHSE" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-down"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">proposal</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="VENDORPROPOSAL" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- col end -->
+
+                            <!-- Row Started -->
+                            <div class="row">
+                                <!-- col started -->
+                                <div class="col-md-3">
+                                    <div class="boxshadow spaceRow">
+                                        <div class="middleTitleGraph">
+                                            <div class="graphtitle">Purchase draft</div> 
+                                            <div><i class="fas fa-external-link-square-alt"></i></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="middleAmount">
+                                                    564,259,500.00
+                                                    <div class="specialText">Likes</div>
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="PURCHASEDRAFT" width="50" height="20"></canvas>
+                                                <div class="mapDetails cebterTxte">
+                                                    <i class="fas fa-caret-up"></i>2.56%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col started -->
+                                <!-- col started -->
+                                <div class="col-md-3">
+                                    <div class="boxshadow spaceRow">
+                                        <div class="middleTitleGraph">
+                                            <div class="graphtitle">pending purchase</div> 
+                                            <div><i class="fas fa-external-link-square-alt"></i></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="middleAmount">
+                                                    564,259,500.00
+                                                    <div class="specialText">Likes</div>
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="PENDINGPURCHASE" width="50" height="20"></canvas>
+                                                <div class="mapDetails cebterTxte">
+                                                    <i class="fas fa-caret-up"></i>2.56%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col started -->
+                                <!-- col started -->
+                                <div class="col-md-3">
+                                    <div class="boxshadow spaceRow">
+                                        <div class="middleTitleGraph">
+                                            <div class="graphtitle">cancel orders</div> 
+                                            <div><i class="fas fa-external-link-square-alt"></i></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="middleAmount">
+                                                    564,259,500.00
+                                                    <div class="specialText">Likes</div>
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="CANCELORDERS" width="50" height="20"></canvas>
+                                                <div class="mapDetails cebterTxte">
+                                                    <i class="fas fa-caret-up"></i>2.56%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col started -->
+                                <!-- col started -->
+                                <div class="col-md-3">
+                                    <div class="boxshadow spaceRow">
+                                        <div class="middleTitleGraph">
+                                            <div class="graphtitle">stock Alert</div> 
+                                            <div><i class="fas fa-external-link-square-alt"></i></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="middleAmount">
+                                                    564,259,500.00
+                                                    <div class="specialText">Likes</div>
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="STOCKALERT" width="50" height="20"></canvas>
+                                                <div class="mapDetails cebterTxte">
+                                                    <i class="fas fa-caret-up"></i>2.56%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col started -->
+                            </div>
+                            <!-- Row End -->
+
+                        </div>
+                        
+                    </div>
+                    <!-- tab content section statrted -->
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="GRAPHTWO">
+                        hello
+                    </div>
+                    <!-- tab content section end -->
+
+                </div> 
+            </div>
+
+        </div>
+        
+        <div class="row rowPadding">
+            <!-- grid start-->
+            <div class="col-md-6 mainTab">
+                <div class="boxshadow">
+                    <nav>
+                        <div class="nav nav-tabs" id="LineChart" role="tablist">
+                          
+                          <!-- tab name statrt -->
+                          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-LIABLITES" type="button" role="tab" aria-controls="nav-liabiles" aria-selected="true">Home</button>
+                          <!-- tab name end -->
+                        
+                          <!-- tab name statrt -->
+                          <button class="nav-link" id="CASH" data-bs-toggle="tab" data-bs-target="#cash" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cash</button>
+                          <!-- tab name end -->
+
+                          <!-- tab name statrt -->
+                          <button class="nav-link" id="FLOWTAB" data-bs-toggle="tab" data-bs-target="#flowtab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flow</button>
+                          <!-- tab name end -->
+
+                          <!-- tab name statrt -->
+                          <button class="nav-link" id="ASSETS" data-bs-toggle="tab" data-bs-target="#assetsTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Assets</button>
+                          <!-- tab name end -->
+
+
+                          <!-- tab name statrt -->
+                          <button class="nav-link" id="INCOME" data-bs-toggle="tab" data-bs-target="#incomeTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">In come</button>
+                          <!-- tab name end -->
+
+                        </div>
+                      </nav>
+                      <div class="tab-content tabdetails" id="nav-tabContent">
+
+                        <!-- tab content start -->
+                        <div class="tab-pane fade show active" id="nav-LIABLITES" role="tabpanel" aria-labelledby="nav-liabiles">
+                            <div class="row">
+                                <div class="col-md-6 themeSelect">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 themeSelect">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="emptyRow"></div>
+                            <canvas id="LIABLITES" width="50" height="20"></canvas>
                             
-                            <div class="row graphdetails">
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 500,200</div>
-                                    <div class="valueNames"> Order Details</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 500,200</div>
-                                    <div class="valueNames"> This month</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 300</div>
-                                    <div class="valueNames"> Expected profit</div>
-                                </div>
-                            </div>
-
-                            <canvas id="SALES" width="100%" height="100"></canvas>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="GRAPHTWO">
-
-                            <div class="row graphdetails">
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 500</div>
-                                    <div class="valueNames"> Order Details</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 60</div>
-                                    <div class="valueNames"> This month</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="valueNumber"> 50</div>
-                                    <div class="valueNames"> Expected profit</div>
-                                </div>
-                            </div>
-                            <canvas id="PURCHASE" width="100%" height="100"></canvas>
-
+                        <!-- tab content end -->
+                        
+                        <!-- tab content start -->
+                        <div class="tab-pane fade" id="cash" role="tabpanel" aria-labelledby="CASH">
+                            Cash
                         </div>
-                  </div> 
+                        <!-- tab content end -->
+
+
+                        <!-- tab content start -->
+                        <div class="tab-pane fade" id="flowtab" role="tabpanel" aria-labelledby="FLOWTAB">
+                            Flow
+                        </div> 
+                        <!-- tab content end -->
+
+                        <!-- tab content start -->
+                        <div class="tab-pane fade" id="assetsTab" role="tabpanel" aria-labelledby="ASSETS">
+                            Assets
+                        </div> 
+                        <!-- tab content end -->
+
+                        <!-- tab content start -->
+                        <div class="tab-pane fade" id="incomeTab" role="tabpanel" aria-labelledby="INCOME">
+                            Income
+                        </div> 
+                        <!-- tab content end -->
+
+                      </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                
-                <canvas id="new" width="100%" height="100"></canvas>
+            <!-- grid End -->
+
+            <!-- grid start-->
+            <div class="col-md-6">
+                <div class="boxshadow">
+                    <div class="middleTitleGraph">
+                        <div class="graphtitle">Operating Profit</div> 
+                    </div>
+                    <canvas id="OPERATINGPROFIT" width="50" height="27"></canvas>
+                </div>
             </div>
+            <!-- grid End -->
+
         </div>
     </div>
 
     
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
+    <script src="roundChart.js"></script>
+    <script src="barchart.js"></script>
+    <script src="lineChart.js"></script>
+    <script src="common.js"></script>
 </body>
 </html>

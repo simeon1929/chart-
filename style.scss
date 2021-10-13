@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+$mainColor : #8575e3;
 body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -14,21 +15,166 @@ img {
     .nav {
         margin-bottom: 15px;
     }
-    .graphtitle {
-        font-size: 19px;
-        font-weight: 600;
-        padding-bottom: 15px;
+    
+    
+}
+.graphtitle {
+    font-size: 19px;
+    font-weight: 500;
+    color: $mainColor;
+    text-transform: uppercase;
+}
+
+.boderRadious {
+    border-radius: 6px;
+}
+.boxStylebg {
+    background-color: #efebf6;
+    padding: 15px 5px;
+}
+
+.centerdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxshadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.topdashBardDetails {
+    .amount {
+        font-weight: bold;
+        font-size: 16px;
     }
-    .graphdetails {
-        margin-bottom: 15px;
-        .valueNumber {
-            font-size: 18px;
-            font-weight: 600;
+    .details__amount {
+        font-size: 17px;
+        text-transform: capitalize;
+    }
+    .amount, .details__amount {
+        text-align: right;
+    }
+}
+.tabdetails {
+    padding-top: 20px;
+}
+.mainTab {
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .borderRow {
+        .borderRight {
+            border-right: 2px solid #f0f0f2;
+            &:last-child {
+                border-right: none;
+            }
         }
-        .valueNames {
-            font-size: 16px;
-            font-weight: 400;
+    }
+    .nav-link {
+        padding-left: 0;
+        padding-right: 20px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+.mainTab .nav-tabs .nav-link.active {
+    color: $mainColor;
+    background-color: #fff;
+    border-bottom: 4px solid $mainColor;
+    background-color: #fcfcfc;
+    border-radius: 0;
+  }
+  .mainTab .nav-tabs .nav-link {
+    border-bottom: 4px solid transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .mainTab .nav-link {
+    color: #000;
+  }
+  .mainTab button:focus,.form-tab  button{
+    outline: none;
+    border:none;
+    box-shadow: none ;
+  }
+  .mainTab select#incoterm_id{
+    width: 50%;
+    min-width: 50%;
+    max-width: 50% ;
+  }
+  .mainTab .classfortooltip{
+    display: none ;
+  }
+.themeSelect {
+    .form-select {
+        border : 1px solid $mainColor;
+        border-radius: 10px;
+    }
+}
+.priceSelect {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.accountDetails {
+    padding-top: 5px;
+}
+.paddingBoxLeftRight {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.rowPadding { padding-bottom: 30px;}
+
+.mapDetails {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    i {
+        font-size: 17px;
+        &.fa-caret-up {
+        color: $mainColor;
         }
+        &.fa-caret-down {
+        color: crimson;
+        }
+        padding-right: 5px;
+    }
+}
+.middleTitleGraph {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.middleAmount {
+    font-weight: bold;
+}
+.specialText {
+    font-size: 14px;
+    color: #8e8e8e;
+    padding-top: 10px;
+}
+.cebterTxte {
+    justify-content: center;
+}
+.spaceRow {
+    margin-bottom: 30px;
+}
+.actiiveSmallGrapg, .actiiveSmallGrapg:hover {
+    background-color: $mainColor;
+    .graphtitle, .middleAmount, .specialText, .cebterTxte {
+        color: white;
+    }
+    .middleTitleGraph i {
+        color: white;
     }
     
+}
+.emptyRow {
+    padding: 10px;
 }
