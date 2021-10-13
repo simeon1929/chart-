@@ -42,7 +42,12 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="smallmap">
-                                                <canvas id="TOPSALES" width="100" height="100"></canvas>
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <canvas id="TOPSALES" width="100" height="50"></canvas>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                             <div class="mapDetails">
                                                 <i class="fas fa-caret-down"></i>2.56%
@@ -160,8 +165,21 @@
                 </div>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="themeSelect">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected="">Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="emptyRow"></div>
+            </div>
+        </div>
         <div class="row rowPadding">
+            
             <!-- dashboard -->
             <div class="col-md-12 graphCustom mainTab">
                 <!-- tabs list started -->
@@ -180,32 +198,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="boxshadow">
-                                    
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="graphtitle">Payable</div>
                                             <canvas id="SALES" width="100" height="42"></canvas>
                                         </div>
-                                        <!-- <div class="col-md-3">
-                                            <div class="themeSelect">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Weekly</option>
-                                                    <option value="1">Mothly</option>
-                                                    <option value="2">Yearly</option>
-                                                    <option value="3">Date</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="boxStylebg boderRadious">
-                                                <canvas id="roundChart"></canvas>
-                                            </div>
-                                            
-                                        </div> -->
                                     </div>
-                                    
-
                                 </div>
-                                
                             </div>
 
                             <!-- col started -->
@@ -311,116 +310,117 @@
                             </div>
                             <!-- col end -->
 
-                            <!-- Row Started -->
-                            <div class="row">
-                                <!-- col started -->
-                                <div class="col-md-3">
-                                    <div class="boxshadow spaceRow">
-                                        <div class="middleTitleGraph">
-                                            <div class="graphtitle">Purchase draft</div> 
-                                            <div><i class="fas fa-external-link-square-alt"></i></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="middleAmount">
-                                                    564,259,500.00
-                                                    <div class="specialText">Likes</div>
-                                                    
-                                                </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <canvas id="PURCHASEDRAFT" width="50" height="20"></canvas>
-                                                <div class="mapDetails cebterTxte">
-                                                    <i class="fas fa-caret-up"></i>2.56%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- col started -->
-                                <!-- col started -->
-                                <div class="col-md-3">
-                                    <div class="boxshadow spaceRow">
-                                        <div class="middleTitleGraph">
-                                            <div class="graphtitle">pending purchase</div> 
-                                            <div><i class="fas fa-external-link-square-alt"></i></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="middleAmount">
-                                                    564,259,500.00
-                                                    <div class="specialText">Likes</div>
-                                                    
-                                                </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <canvas id="PENDINGPURCHASE" width="50" height="20"></canvas>
-                                                <div class="mapDetails cebterTxte">
-                                                    <i class="fas fa-caret-up"></i>2.56%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- col started -->
-                                <!-- col started -->
-                                <div class="col-md-3">
-                                    <div class="boxshadow spaceRow">
-                                        <div class="middleTitleGraph">
-                                            <div class="graphtitle">cancel orders</div> 
-                                            <div><i class="fas fa-external-link-square-alt"></i></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="middleAmount">
-                                                    564,259,500.00
-                                                    <div class="specialText">Likes</div>
-                                                    
-                                                </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <canvas id="CANCELORDERS" width="50" height="20"></canvas>
-                                                <div class="mapDetails cebterTxte">
-                                                    <i class="fas fa-caret-up"></i>2.56%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- col started -->
-                                <!-- col started -->
-                                <div class="col-md-3">
-                                    <div class="boxshadow spaceRow">
-                                        <div class="middleTitleGraph">
-                                            <div class="graphtitle">stock Alert</div> 
-                                            <div><i class="fas fa-external-link-square-alt"></i></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="middleAmount">
-                                                    564,259,500.00
-                                                    <div class="specialText">Likes</div>
-                                                    
-                                                </div>
-    
-                                            </div>
-                                            <div class="col-md-6">
-                                                <canvas id="STOCKALERT" width="50" height="20"></canvas>
-                                                <div class="mapDetails cebterTxte">
-                                                    <i class="fas fa-caret-up"></i>2.56%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- col started -->
-                            </div>
-                            <!-- Row End -->
+                            
 
                         </div>
+                        <!-- Row Started -->
+                        <div class="row">
+                            <!-- col started -->
+                            <div class="col-md-3">
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">Purchase draft</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="PURCHASEDRAFT" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col started -->
+                            <!-- col started -->
+                            <div class="col-md-3">
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">pending purchase</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="PENDINGPURCHASE" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col started -->
+                            <!-- col started -->
+                            <div class="col-md-3">
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">cancel orders</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="CANCELORDERS" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col started -->
+                            <!-- col started -->
+                            <div class="col-md-3">
+                                <div class="boxshadow spaceRow">
+                                    <div class="middleTitleGraph">
+                                        <div class="graphtitle">stock Alert</div> 
+                                        <div><i class="fas fa-external-link-square-alt"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="middleAmount">
+                                                564,259,500.00
+                                                <div class="specialText">Likes</div>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <canvas id="STOCKALERT" width="50" height="20"></canvas>
+                                            <div class="mapDetails cebterTxte">
+                                                <i class="fas fa-caret-up"></i>2.56%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col started -->
+                        </div>
+                        <!-- Row End -->
                         
                     </div>
                     <!-- tab content section statrted -->
