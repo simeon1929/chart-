@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css");
 body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -190,6 +191,7 @@ img {
 
 .middleAmount {
   font-weight: bold;
+  word-break: break-all;
 }
 
 .specialText {
@@ -222,5 +224,127 @@ img {
 
 .emptyRow {
   padding: 10px;
+}
+
+.spaceBtnDiv {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.gridRow {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.gridRow.topTabOne {
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
+@media screen and (max-width: 1300px) {
+  .middleAmount {
+    font-size: 15px;
+  }
+  .specialText {
+    padding-top: 0;
+  }
+  .middleTitleGraph {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .container#graphMaster {
+    width: 100%;
+    max-width: 100%;
+  }
+  .container#graphMaster .topTabOne .col-md-9 .row .col-md-3 {
+    width: 50%;
+  }
+  .container#graphMaster .mainTab .nav-tabs {
+    border-bottom: none;
+  }
+  .container#graphMaster .mainTab .borderRow .borderRight:nth-child(2) {
+    border-right: none;
+  }
+  .container#graphMaster .graphGroups .col-md-6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .container#graphMaster .graphGroups .col-md-3 {
+    width: 50%;
+  }
+  .spaceRow {
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .gridRow .row .col-md-3 .row .col-md-6 {
+    width: 50%;
+  }
+  .gridRow .row .col-md-3 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gridRow.topTabOne {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gridRow .row .col-md-3 {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f2;
+  }
+  .gridRow .row .col-md-3:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .mainTab .borderRow .borderRight {
+    border-right: none;
+  }
+  .mapDetails {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .mobileHide canvas {
+    display: none !important;
+  }
+  .graphtitle {
+    font-size: 16px;
+  }
+  .container#graphMaster .graphGroups .col-md-3 {
+    width: 100%;
+  }
+  .topTabOne .gridCol .row .row {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .gridRow .row .col-md-3 .row .col-md-6 {
+    width: 100%;
+  }
+  .topdashBardDetails .amount, .topdashBardDetails .details__amount {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .mainTab .nav {
+    display: inherit;
+  }
+  .mainTab .nav-tabs .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
