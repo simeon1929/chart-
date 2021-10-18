@@ -294,6 +294,9 @@ img {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .mobilePadding {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 480px) {
