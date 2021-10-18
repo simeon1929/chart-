@@ -51,12 +51,13 @@ img {
     }
     .details__amount {
         font-size: 17px;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
     .amount, .details__amount {
         text-align: right;
     }
 }
+
 .tabdetails {
     padding-top: 20px;
 }

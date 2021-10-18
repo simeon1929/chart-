@@ -1,4 +1,26 @@
 var ctxtopSles = document.getElementById('TOPSALES').getContext('2d');
+var ctxtopPurchase = document.getElementById('TOPPURCHASE').getContext('2d');
+var ctxtopIncome = document.getElementById('TOPINCOME').getContext('2d');
+var ctxtopExpense = document.getElementById('TOPEXPENSE').getContext('2d');
+
+// Gradient
+let width, height, gradient;
+function getGradient(ctx, chartArea) {
+  const chartWidth = chartArea.right - chartArea.left;
+  const chartHeight = chartArea.bottom - chartArea.top;
+  if (gradient === null || width !== chartWidth || height !== chartHeight) {
+    // Create the gradient because this is either the first render
+    // or the size of the chart has changed
+    width = chartWidth;
+    height = chartHeight;
+    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+    gradient.addColorStop(0, Utils.CHART_COLORS.blue);
+    gradient.addColorStop(0.5, Utils.CHART_COLORS.yellow);
+    gradient.addColorStop(1, Utils.CHART_COLORS.red);
+  }
+
+  return gradient;
+}
 
 var commonOptins = {
     plugins: {
@@ -40,17 +62,6 @@ var dataValues = {
             // maxBarThickness: 4, // bar thickness
            // minBarLength: 1,
             borderWidth: 2,
-            backgroundColor: [
-                'rgba(221, 101, 250, 1)',
-                'rgba(196, 171, 223, 1)',
-                'rgba(221, 101, 250, 1)',
-                'rgba(196, 171, 223, 1)',
-                'rgba(221, 101, 250, 1)',
-                'rgba(196, 171, 223, 1)',
-                'rgba(196, 171, 223, 1)',
-                'rgba(196, 171, 223, 1)',
-                'rgba(196, 171, 223, 1)',
-            ],
             borderColor: [
                 'rgba(221, 101, 250, 1)',
                 'rgba(196, 171, 223, 1)',
@@ -66,6 +77,21 @@ var dataValues = {
 }
 
 var topSles = new Chart(ctxtopSles, {
+    type: 'line',
+    data: dataValues,
+    options: commonOptins
+});
+var topPurchase = new Chart(ctxtopPurchase, {
+    type: 'line',
+    data: dataValues,
+    options: commonOptins
+});
+var topIncome = new Chart(ctxtopIncome, {
+    type: 'line',
+    data: dataValues,
+    options: commonOptins
+});
+var topExpense = new Chart(ctxtopExpense, {
     type: 'line',
     data: dataValues,
     options: commonOptins
