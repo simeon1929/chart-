@@ -283,6 +283,11 @@ img {
     .mapDetails {
         justify-content: left;
     }
+    .topTabOne {
+        .mapDetails {
+            justify-content: right;
+        }  
+    }
     .mobileHide {
         canvas {
             display: none !important;
@@ -298,12 +303,9 @@ img {
     }
     .topTabOne {
         .gridCol .row .row {
-            flex-wrap: wrap-reverse;
+            flex-flow: row-reverse;
+            align-items: center;
         }
-        
-    }
-    .gridRow .row .col-md-3 .row .col-md-6 {
-        width: 100%;
         
     }
     .topdashBardDetails .amount, .topdashBardDetails .details__amount {
@@ -353,6 +355,9 @@ img {
         .nav {
             padding-top: 10px;
         }
+    }
+    .mobileBottom {
+        margin-bottom: 15px;
     }
 }
 

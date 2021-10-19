@@ -198,16 +198,18 @@
             
             <!-- dashboard -->
             <div class="col-md-12 graphCustom mainTab graphGroups">
-                <!-- tabs list started -->
-                <ul class="nav nav-tabs" id="sideView" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="GRAPHone" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Payable</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="GRAPHTWO" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Reciveable</button>
-                    </li>
-                </ul>
-                 <!-- tabs list end -->
+                <div class="mobileClickChange borderBtnMobile mobileBottom">
+                    <!-- tabs list started -->
+                    <ul class="nav nav-tabs" id="sideView" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="GRAPHone" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Payable</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="GRAPHTWO" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Reciveable</button>
+                        </li>
+                    </ul>
+                    <!-- tabs list end -->
+                </div>
             
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="GRAPHone">
@@ -454,33 +456,43 @@
             <!-- grid start-->
             <div class="col-md-6 mainTab mobilePadding">
                 <div class="boxshadow">
-                    <nav>
-                        <div class="nav nav-tabs" id="LineChart" role="tablist">
-                          
+                    <div class="mobileClickChange borderBtnMobile">
+                        <ul class="nav nav-tabs" id="LineChart" role="tablist">
                           <!-- tab name statrt -->
-                          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-LIABLITES" type="button" role="tab" aria-controls="nav-liabiles" aria-selected="true">Home</button>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-LIABLITES" type="button" role="tab" aria-controls="nav-liabiles" aria-selected="true">Home</button>
+                          </li>
                           <!-- tab name end -->
                         
                           <!-- tab name statrt -->
-                          <button class="nav-link" id="CASH" data-bs-toggle="tab" data-bs-target="#cash" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cash</button>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="CASH" data-bs-toggle="tab" data-bs-target="#cash" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cash</button>
+                          </li>
                           <!-- tab name end -->
 
                           <!-- tab name statrt -->
-                          <button class="nav-link" id="FLOWTAB" data-bs-toggle="tab" data-bs-target="#flowtab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flow</button>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="FLOWTAB" data-bs-toggle="tab" data-bs-target="#flowtab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flow</button>
+                          </li>
                           <!-- tab name end -->
 
                           <!-- tab name statrt -->
-                          <button class="nav-link" id="ASSETS" data-bs-toggle="tab" data-bs-target="#assetsTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Assets</button>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="ASSETS" data-bs-toggle="tab" data-bs-target="#assetsTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Assets</button>
+                          </li>
                           <!-- tab name end -->
 
 
                           <!-- tab name statrt -->
-                          <button class="nav-link" id="INCOME" data-bs-toggle="tab" data-bs-target="#incomeTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">In come</button>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="INCOME" data-bs-toggle="tab" data-bs-target="#incomeTab" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">In come</button>
+                          </li>
                           <!-- tab name end -->
 
-                        </div>
-                      </nav>
-                      <div class="tab-content tabdetails" id="nav-tabContent">
+                        </ul>
+                    </div>
+
+                    <div class="tab-content tabdetails" id="nav-tabContent">
 
                         <!-- tab content start -->
                         <div class="tab-pane fade show active" id="nav-LIABLITES" role="tabpanel" aria-labelledby="nav-liabiles">
