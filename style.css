@@ -380,10 +380,11 @@ img {
   .borderBtnMobile .select-filter:after {
     position: absolute;
     right: 6px;
-    top: 2px;
+    top: -7px;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f078";
+    content: "\f0dd";
+    font-size: 22px;
   }
   .borderBtnMobile .nav {
     padding-top: 10px;
