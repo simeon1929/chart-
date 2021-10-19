@@ -320,5 +320,39 @@ img {
         width: 100%;
         text-align: left;
     }
+    .mobileClickChange .nav-tabs {
+        display: none;
+    } 
+    .borderBtnMobile {
+        padding: 7px;
+        border: 1px solid #8575e3;
+        border-radius: 13px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .mainTab .nav-tabs .nav-link.active {
+        border-bottom: none;
+    }
+    .mainTab .nav-link {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .borderBtnMobile {
+        .select-filter {
+            position: relative;
+            font-weight: 400;
+            &:after {
+                position: absolute;
+                right: 6px;
+                top: 2px;
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f078";
+            }
+        }
+        .nav {
+            padding-top: 10px;
+        }
+    }
 }
 

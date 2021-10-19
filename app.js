@@ -76,19 +76,23 @@ var salesOne = new Chart(salesMonth, {
 });
 
 
+$(document).ready(function () {
 
 
+    if($(window).width() < 767 ){
+        $('.mobileClickChange').each(function(){
+            var ActiveTabName = $(this).find('.nav-link.active').text();
+            $('<div class="select-filter">'+ActiveTabName+'</div>').prependTo(this).find('.mobileClickChange');
+        });
+        $('.select-filter').click(function() {
+            // $(this).toggleClass('arrow')
+            $(this).next('ul').slideToggle('600');
+        });
+        $('.mobileClickChange ul.nav button').click(function() {
+            var text = $(this).text();
+            $(this).parents('ul').prev('.select-filter').text(text);
+            $(".mobileClickChange ul.nav").hide(300);
+        });
+    }
+})
 
-$(document).ready(function(){
-    // Add minus icon for collapse element which is open by default
-    $(".collapse.show").each(function(){
-        $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
-    });
-
-    // Toggle plus minus icon on show hide of collapse element
-    $(".collapse").on('show.bs.collapse', function(){
-        $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
-    }).on('hide.bs.collapse', function(){
-        $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
-    });
-});
