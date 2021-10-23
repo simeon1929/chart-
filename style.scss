@@ -313,6 +313,70 @@ img {
     }
 }
 
+.addressBar {
+    display: flex;
+    align-items: center;
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0;
+        
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .subTitle {
+        font-size: 16px;
+    }
+    .blogAddress {
+        position: relative;
+        // display: flex;
+        // align-items: center;
+        .image__logo {
+            position: absolute;
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            top: -19px;
+            border: 5px solid #8575e3;
+            img {
+                width: 116px;
+                height: 116px;
+                border-radius: 50%;
+            }
+        }
+        .addressRow {
+            padding-left: 140px;
+            text-transform: capitalize;
+            
+        }
+    }
+    .borderRowOnly {
+        border: 1px solid #e4e8eb;
+        border-radius: 8px;
+    }
+    .addressGrid {
+        margin:15px 0;
+        border-right: 1px solid #e4e8eb;
+        &:last-child { border-right: none;}
+        h4 {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
+    }
+    .gridCol {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap: 15px;
+    }
+}
+.linkColor a {
+    background-color: $mainColor;
+    color: #fff;
+    padding: 6px;
+    border-radius: 9px;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 639px) { 
     .mainTab .nav {
         display: inherit;
